@@ -2,6 +2,7 @@ package core
 
 import (
 	"encoding/json"
+	"net/http"
 )
 
 type ResponseInterface interface {
@@ -9,6 +10,7 @@ type ResponseInterface interface {
 }
 
 type BaseResponse struct {
+	*http.Response
 	RawBody        []byte
 	HttpStatusCode int
 }

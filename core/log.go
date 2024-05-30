@@ -80,7 +80,7 @@ var defaultLogger = NewDefaultLogger(defaultLogLevel)
 func NewDefaultLogger(level LogLevel) *sampleLogger {
 	return &sampleLogger{
 		DEBUG: log.New(os.Stdout, fmt.Sprintf("DEBUG %s ", defaultLogPrefix), defaultLogFlag),
-		ERROR: log.New(os.Stdout, fmt.Sprintf("ERROR %s ", defaultLogPrefix), defaultLogFlag),
+		ERROR: log.New(os.Stdout, fmt.Sprintf("Err %s ", defaultLogPrefix), defaultLogFlag),
 		INFO:  log.New(os.Stdout, fmt.Sprintf("INFO %s ", defaultLogPrefix), defaultLogFlag),
 		WARN:  log.New(os.Stdout, fmt.Sprintf("WARN %s ", defaultLogPrefix), defaultLogFlag),
 		level: level,

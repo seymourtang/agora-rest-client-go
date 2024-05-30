@@ -141,6 +141,7 @@ func (c *ClientImpl) DoREST(ctx context.Context, path string,
 	c.logger.Debugf(ctx, c.module, "http response:%s", body)
 
 	return &BaseResponse{
+		Response:       resp,
 		RawBody:        body,
 		HttpStatusCode: resp.StatusCode,
 	}, nil
